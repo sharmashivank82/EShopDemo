@@ -1,0 +1,115 @@
+.cardContainer{
+    display: flex;
+    width: 522px;
+    height: 327px;
+    border: 1px solid;
+    border-radius: 12px;
+    box-shadow: 1px 5px whitesmoke;
+}
+
+.cardContainer .imageContainer{
+    width: 50%;
+}
+
+.cardContainer .imageContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cardContainer .dataContainer{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 50%;
+}
+
+.upperContainer{
+    position: relative;
+    height: 85%;
+}
+
+.upperContainer h3{
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 36px;
+    color: #474747;
+    margin: 2vh 0;
+}
+
+.upperContainer p{
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: #474747c4;
+}
+
+.upperContainer div{
+    position: absolute;
+    bottom: 10px;
+    border: 1px solid;
+    border-radius: 13px;
+    padding: 6px 18px;
+    background: orange;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.1px;
+}
+
+.lowerContainer{
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.lowerContainer .money{
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 36px;
+    color: #474747;
+    margin: 2vh 0;
+    width: 66%;
+}
+
+.lowerContainer span{
+    width: 17%;
+    cursor: pointer;
+}
+
+.lowerContainer span i{
+    font-size: 1.7rem;
+}
+
+@media screen and (max-width: 560px) {
+    .cardContainer{
+        width: 400px;
+    }
+
+    .upperContainer h3{
+        margin: 0vh 0 2vh 0;
+        font-size: 18px;
+    }
+
+    .upperContainer p{
+        font-size: 18px;
+    }
+
+    .cardContainer .dataContainer{
+        padding: 15px;
+    }
+
+    .lowerContainer .money{
+        font-size: 18px;
+    }
+
+    .lowerContainer span i{
+        font-size: 1.3rem;
+    }
+}

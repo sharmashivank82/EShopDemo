@@ -1,0 +1,114 @@
+.container{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-direction: row;
+}
+
+.container .heading{
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 27px;
+    color: #000000;
+    width: 210px;
+    text-align: center;
+}
+
+.container .searchContainer{
+    width: 918px;
+    border: 1px solid;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.container .searchContainer input{
+    padding: 12px;
+    border: none;
+    outline: none;
+    width: 92%;
+    font-size: 28px;
+    border-radius: 14px
+}
+
+.container .searchContainer i{
+    padding: 12px 0;
+    width: 8%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.container .heartContainer{
+    position: relative;
+    width: 85px;
+    padding: 12px;
+    margin: 0 12px
+}
+
+.container .heartContainer i{
+    font-size: 2.5rem;
+    color: tomato;
+}
+
+.container .heartContainer span{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 700;
+    top: 0px;
+}
+
+.container .cartContainer{
+    position: relative;
+    width: 85px;
+    padding: 12px;
+    margin: 0 12px
+}
+
+.container .cartContainer i{
+    font-size: 2.5rem;
+}
+
+.container .cartContainer span{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 700;
+    top: 0px;
+}
+
+@media screen and (max-width: 1030px) {
+    .container .heading, .container .searchContainer input{
+        font-size: 16px;
+    }
+
+    .container .cartContainer{
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 837px) {
+
+    .container .searchContainer input{
+        width: 87%;
+    }
+
+    .container .heartContainer i{
+        font-size: 2rem;
+    }
+
+    .container .cartContainer{
+        margin: 0 12px 0 0;
+    }
+
+    .container .cartContainer img{
+        width: 41px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
