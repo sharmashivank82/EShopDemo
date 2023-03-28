@@ -1,4 +1,3 @@
-// import { useNavigate } from "react-router-dom"
 import Card from "../../SharedComponent/card";
 import Header from "../../SharedComponent/Header";
 import style from './Home.module.css';

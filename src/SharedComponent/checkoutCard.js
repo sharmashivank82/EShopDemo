@@ -32,15 +32,18 @@ function CheckoutCard(props) {
             )
             return data;
         })
+        setProductListWithQuantity((prevQuantity) => prevQuantity.filter(word => word.id !== item.id))
     }
 
     useEffect(() => {
         setQuantitySelected((prevstate) => ({ ...prevstate, id: item.id, price: item.price, name: item.name }))
+        // eslint-disable-next-line
     }, [])
 
     useEffect(() => {
         if(quantitySelected.id !== '')
             setData()
+        // eslint-disable-next-line
     }, [quantitySelected])
 
   return (
