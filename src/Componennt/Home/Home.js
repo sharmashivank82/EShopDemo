@@ -5,11 +5,13 @@ import style from './Home.module.css';
 import { useEffect, useContext, useState } from "react";
 import mainContext from "../../Context/mainContext";
 import FruitList from "../../API/FruitList";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
 
   const context = useContext(mainContext);
-  const { searchText } = context;
+  const { searchText, setProductList } = context;
+  const navigate = useNavigate();
 
   const [ cardList, setCardList ] = useState([]);
   const [ selectedProduct, setSelectedProduct ] = useState('')
@@ -18,6 +20,7 @@ function Home() {
     try{
       const res =  await FruitList.getFruitList();
       setCardList(res);
+      setProductList(res);
     }catch(err){
       console.error(err);
     }
@@ -25,6 +28,10 @@ function Home() {
 
   const handleSelect = (item) => {
     setSelectedProduct(item);
+  }
+
+  const handleNavigate = () => {
+    navigate('/checkout')
   }
 
   useEffect(() => {
@@ -50,7 +57,7 @@ function Home() {
             cardList && cardList.length > 0 &&
             cardList.map((item, index) => {
               if(searchText !== ''){
-                if(item.name.toLowerCase().includes(searchText)){
+                if(item.name.toLowerCase().includes(searchText?.toLowerCase())){
                   return <Card item={item} key={index} />
                 }
               }else{
@@ -62,6 +69,10 @@ function Home() {
               }
             })
           }
+        </div>
+
+        <div className={`${style.buttonContainer}`} style={{ cursor: 'pointer' }} onClick={handleNavigate}>
+          <button className={`${style.selected}`}>Proceed To Cart</button>
         </div>
 
     </>

@@ -5,6 +5,7 @@ const MainState = (props) => {
 
     const [cartList, setCartList] = useState([])
     const [favouriteList, setFavouriteList] = useState([]);
+    const [productList, setProductList] = useState([]);
     const [searchText, setSearchText] = useState('');
 
    return (
@@ -18,6 +19,9 @@ const MainState = (props) => {
 
         favouriteList, 
         setFavouriteList,
+
+        productList, 
+        setProductList
 
     }}>
         {props.children}

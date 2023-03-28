@@ -22,7 +22,7 @@ function Header() {
           </div>
           <div className={`${style.cartContainer}`}>
               {/* <img src={Cart} alt="" /> */}
-              <i class="fas fa-shopping-cart"></i>
+              <i className="fas fa-shopping-cart"></i>
               <span>{cartList?.length}</span>
           </div>
     </div>

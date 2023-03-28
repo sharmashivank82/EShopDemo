@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Componennt/Home/Home";
-import Card from "./SharedComponent/card";
 import MainState from "./Context/mainState";
+import Checkout from "./Componennt/Checkout/Checkout";
 
 import './App.css';
 
@@ -12,7 +12,7 @@ function App() {
         <div className="style-padding">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/checkout" element={<Card />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </div>
       </MainState>

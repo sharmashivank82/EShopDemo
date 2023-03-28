@@ -14,12 +14,10 @@ function Card(props) {
   }
 
   const RemoveCart = (cartItem) => {
-    console.log({ cartItem })
     setCartList((prevState) => {
       let data = prevState.filter((collected) => 
         collected.id !== cartItem.id
       )
-      console.log({ data })
       return data;
     })
   }
